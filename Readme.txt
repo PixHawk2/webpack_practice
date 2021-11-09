@@ -38,3 +38,13 @@ webpack配置流程：
         static: './',
         open:true
   }
+四、配置打包后自动跳转页面
+  1.npm install html-webpack-plugin
+  2.webpack.config.js中新增： 
+  · const HtmlWebpackPlugin = require('html-webpack-plugin')
+    const htmlPlugin = new HtmlWebpackPlugin({
+        template:'./src/index.html',
+        filename:'index.html'
+    })
+  ·exports中新增：
+  plugins:[htmlPlugin]
