@@ -24,4 +24,12 @@ webpack配置流程：
             filename:'bundle.js'//输出文件的名称
     }
       }
-    }
+  }
+
+三、配置自动打包功能：
+  1.安装支持的工具：npm install webpack-dev-server -D
+  2.修改package.json-->scripts中的dev修改为：
+  ·"dev": "webpack-dev-server"
+  3.将src---->index.html文件中，script脚本的引用路径，修改为'/bundle.js'
+  4.npm run dev
+  5.浏览器中访问对应的地址，查看打包结果
