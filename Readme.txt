@@ -33,3 +33,8 @@ webpack配置流程：
   3.将src---->index.html文件中，script脚本的引用路径，修改为'/bundle.js'
   4.npm run dev
   5.浏览器中访问对应的地址，查看打包结果
+  注：上述步骤，因为webpack版本变化后，配置项更改步骤1、2正确，步骤3不改变原先的脚本引用路径，还需要在webpack.config.js中增加如下：
+   devServer:{
+        static: './',
+        open:true
+  }

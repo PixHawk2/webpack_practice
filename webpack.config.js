@@ -8,8 +8,7 @@ module.exports = {
         filename:'bundle.js'//输出文件的名称
     },
     devServer:{
-        host:'localhost',
-        port:8085,
-        open: true
+        static: './',
+        open:true
     }
 }
