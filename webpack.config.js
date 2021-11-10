@@ -15,5 +15,13 @@ module.exports = {
         static: path.join(__dirname,''),
         open:true
     },
-    plugins:[htmlPlugin]
+    plugins:[htmlPlugin],
+    module:{
+        rules:[
+            {test:/\.css$/,use:['style-loader','css-loader','postcss-loader']},
+            {test:/\.less$/,use:['style-loader','css-loader','less-loader']},
+            {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
+            {test:/\.js$/,use:'babel-loader',exclude:/node_modules/}
+        ]
+    }
 }

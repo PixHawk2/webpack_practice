@@ -1,0 +1,12 @@
+li{
+    list-style: none;
+}
+::placeholder{
+    color:blue;
+}
+#box{
+    width: 500px;
+    height: 340px;
+    background-color: tomato;
+    background: url('../images/test.jpg');
+}
